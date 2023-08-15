@@ -1,0 +1,191 @@
+.section-container-settings {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(196, 251, 80);
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    /* color: #fff; */
+}
+
+.settings-logo {
+    width: 30%;
+    height: auto;
+    margin-top: 3%;
+    filter: invert(100%);
+}
+
+.login-mystery-screen {
+    font-family: 'AvenirNextCondensed-Medium';
+    font-size: 20px;
+    opacity: 0.6;
+    margin-top: 5%;
+}
+
+.form-pin-login {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    margin-top: 15%;
+}
+
+.pin-input-text {
+    color: rgb(9, 9, 9);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'AvenirNextCondensed-Medium';
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.pin-input-field {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    max-width: 150px;
+    height: 30px;
+    background-color: rgb(225, 225, 225);
+    text-align: center;
+    font-size: 30px;
+    border-radius: 10px;
+    outline: none;
+    text-decoration-line: none;
+    text-decoration-color: none;
+    border: 1px solid rgb(9,9,9);
+}
+
+.error-container-settings {
+    height: 20px;
+}
+
+.error-message-settings {
+    padding: 3% 0%;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    color: red;
+    font-weight: 600;
+    font-family: 'AvenirNextCondensed-Medium';
+    font-size: 16px;
+}
+
+.login-button {
+    color: rgb(9, 9, 9);
+    border: 3px solid rgb(9, 9, 9);
+    font-family: 'AvenirNextCondensed-Medium';
+    font-size: 20px;
+    padding: 2% 0%;
+    margin: auto;
+    margin-top: 3%;
+    text-transform: uppercase;
+    width: 90%;
+    align-items: center;
+    text-align: center;
+}
+
+.login-enter-button {
+    width: 50%;
+    margin-top: 5%;
+    background-color: rgb(9, 9, 9);
+    font-weight: 600;
+    color: rgb(196, 251, 80);
+}
+
+.login-other-functions {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+}
+
+.all-settings {
+    width: 90%;
+    margin: auto;
+    margin-top: 2%;
+    border: 2px solid rgb(9, 9, 9);
+    padding: 2% 0%;
+}
+
+.ip-currently-set-small,
+.ip-currently-set-large,
+.pin-currently-set {
+    font-family: 'AvenirNextCondensed-Medium';
+    font-size: 16px;
+    padding-bottom: 3px;
+    font-style: italic;
+}
+
+.ip-settings-small-text,
+.ip-settings-large-text,
+.pin-settings-text {
+    font-family: 'AvenirNextCondensed-Medium';
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.small-input-field,
+.large-input-field,
+.new-pin-input-field {
+    height: 20px;
+    width: 150px;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+    outline: none;
+    text-decoration-line: none;
+    text-decoration-color: none;
+    border: 1px solid rgb(9,9,9);
+}
+
+.update-reset-button {
+    color: rgb(9, 9, 9);
+    border: 2px solid rgb(9, 9, 9);
+    font-family: 'AvenirNextCondensed-Medium';
+    font-size: 14px;
+    padding: 1% 0%;
+    margin: auto;
+    margin-top: 2%;
+    text-transform: uppercase;
+    width: 90%;
+    align-items: center;
+    text-align: center;
+}
+
+.settings-return-back-button {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+.update {
+    color: rgb(196, 251, 80);
+    background-color: rgb(9,9,9);
+}
+
+.button-container-back {
+    width: 100px;
+    height: auto;
+}
+
+.button-text-back {
+    padding: 2%;
+    text-align: center;
+    font-family: 'AvenirNextCondensed-Medium';
+    text-transform: uppercase;
+    border: 1px solid black;
+    background-color: rgb(9, 9, 9);
+    font-weight: 600;
+    color: rgb(196, 251, 80);
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5%;
+}

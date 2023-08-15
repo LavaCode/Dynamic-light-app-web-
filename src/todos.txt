@@ -1,0 +1,2 @@
+- responsive (landscape/portrait)
+- home 100% working (readout of active scene)
