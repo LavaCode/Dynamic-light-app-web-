@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Dynamic-light-app-web-/static/css/main.0d09124e.css",
-    "main.js": "/Dynamic-light-app-web-/static/js/main.0b5c6a37.js",
+    "main.js": "/Dynamic-light-app-web-/static/js/main.ff3dba8a.js",
     "static/js/787.6e9670d2.chunk.js": "/Dynamic-light-app-web-/static/js/787.6e9670d2.chunk.js",
     "static/media/logo.png": "/Dynamic-light-app-web-/static/media/logo.16125e356d27b6c67093.png",
     "static/media/support.png": "/Dynamic-light-app-web-/static/media/support.15f47a55e46ead2a93ca.png",
     "index.html": "/Dynamic-light-app-web-/index.html",
     "main.0d09124e.css.map": "/Dynamic-light-app-web-/static/css/main.0d09124e.css.map",
-    "main.0b5c6a37.js.map": "/Dynamic-light-app-web-/static/js/main.0b5c6a37.js.map",
+    "main.ff3dba8a.js.map": "/Dynamic-light-app-web-/static/js/main.ff3dba8a.js.map",
     "787.6e9670d2.chunk.js.map": "/Dynamic-light-app-web-/static/js/787.6e9670d2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0d09124e.css",
-    "static/js/main.0b5c6a37.js"
+    "static/js/main.ff3dba8a.js"
   ]
 }
