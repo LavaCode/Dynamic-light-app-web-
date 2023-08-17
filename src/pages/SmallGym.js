@@ -3,6 +3,7 @@ import { useNavigate, Outlet } from "react-router-dom";
 import '../styles/SmallGymStyle.css';
 import axios from 'axios';
 import state from '../variables/states';
+import { useMediaQuery } from 'react-responsive'
 
 //const urlSmall = 'http://192.168.1.148'; //temp
 const urlSmall = `http://${state.urlSmallGym}`;  
@@ -10,6 +11,7 @@ const urlSmall = `http://${state.urlSmallGym}`;
 function SmallGym(props) {
     const [ activeEffect, setActiveEffect ] = useState();
     const navigate = useNavigate();
+    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
     
     useEffect(() => {
         state.smallGymEffect = activeEffect
@@ -38,8 +40,10 @@ function SmallGym(props) {
     
     return (
         <div className='section-container'>
-            <div className='header-container'>
-                <a className='header-text' onClick={() => navigate('/largegym')}>Kleine Zaal</a>
+            {isPortrait ? 
+            <>
+            <div className='header-container' onClick={() => navigate('/largegym')}>
+                <a className='header-text'>Kleine Zaal</a>
             </div>
             <div className='scene-list'>
                     {state.effectsSmallGym.map ((effect) => {
@@ -56,6 +60,10 @@ function SmallGym(props) {
             <div className='footer-container' onClick={() => navigate('/home')}>
                 <div className='footer-text'>Terug</div>
             </div>
+            </>
+            : 
+            <div className='orientation-message-small-gym'>The app can only be used in portrait orientation.<br /> Please rotate your device.</div>   
+            }
         </div>
     )
 }

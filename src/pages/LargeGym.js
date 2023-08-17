@@ -3,15 +3,17 @@ import { useNavigate, Outlet } from "react-router-dom";
 import '../styles/LargeGymStyle.css';
 import axios from 'axios';
 import state from '../variables/states';
+import { useMediaQuery } from 'react-responsive'
 
 //const urlLarge = 'http://192.168.1.148'; //temp
 const urlLarge = `http://${state.urlLargeGym}`;  
 
 function LargeGym(props) {
     const [ activeEffect, setActiveEffect ] = useState();
-    const [ editEffect, setEditEffect ] = useState();
-    const [ editScreen, setEditScreen ] = useState(false);
+    // const [ editEffect, setEditEffect ] = useState();
+    // const [ editScreen, setEditScreen ] = useState(false);
     const navigate = useNavigate();
+    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
     
     useEffect(() => {
         state.largeGymEffect = activeEffect
@@ -38,26 +40,26 @@ function LargeGym(props) {
         }
     }
 
-    async function editScene(num) {
-        for (let i in state.effectsLargeGym) {
-            if (state.effectsLargeGym[i].num == num) {
-                try {
-                    setEditEffect(state.effectsLargeGym[i].name);
-                } catch(e) {
-                    console.error(e)
-                }
-            }
-        }
-        setEditScreen(true);
-    }
+    // async function editScene(num) {
+    //     for (let i in state.effectsLargeGym) {
+    //         if (state.effectsLargeGym[i].num == num) {
+    //             try {
+    //                 setEditEffect(state.effectsLargeGym[i].name);
+    //             } catch(e) {
+    //                 console.error(e)
+    //             }
+    //         }
+    //     }
+    //     setEditScreen(true);
+    // }
 
-    function closeEditScreen() {
-        setEditScreen(false);
-    }
+    // function closeEditScreen() {
+    //     setEditScreen(false);
+    // }
     
     return (
         <div className='section-container'>
-            {editScreen &&
+            {/* {editScreen &&
                 <div className='edit-screen'>
                     <div className='edit-name'>
                         <input type='text' inputMode='text' value={activeEffect}></input>
@@ -66,31 +68,41 @@ function LargeGym(props) {
                     </div>
                     <button className='close-edit-screen' onClick={closeEditScreen}>Close</button>
                 </div>
-            }
-            <div className='header-container'>
-                <a className='header-text' onClick={() => navigate('/largegym')}>Grote Zaal</a>
+            } */}
+            {isPortrait ? 
+            <>
+            <div className='header-container' onClick={() => navigate('/smallgym')}>
+                <a className='header-text'>Grote Zaal</a>
             </div>
             <div className='scene-list'>
                     {state.effectsLargeGym.map((effect) => {
                         return (
                             <ul key={effect.key} className='scene-container'>
                                 <div className='scene-text'>{effect.key}. {effect.name}</div>
-                                <div className='scene-controls'>
+                                {/* <div className='scene-controls'> */}
                                     {/* IN DEVELOPMENT */}
                                     {/* <a className='scene-button' onClick={() => editScene(`${effect.num}`)}>
                                         <div className='scene-button-text'>edit</div>
-                                    </a> */}
+                                    // </a> */}
                                     <a className='scene-button' onClick={() => fireScene(`${effect.num}`)}>
                                         <div className='scene-button-text'>fire</div>
                                     </a>
-                                </div>
+                                {/* </div> */}
                             </ul>
+
+                            
                         )
                     })}
             </div>
+
             <div className='footer-container' onClick={() => navigate('/home')}>
                 <div className='footer-text'>Terug</div>
             </div>
+            </>
+            :
+            <div className='orientation-message-large-gym'>The app can only be used in portrait orientation.<br /> Please rotate your device.</div>
+            }
+            
         </div>
     )
 }

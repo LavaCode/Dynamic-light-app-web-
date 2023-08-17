@@ -5,6 +5,7 @@ import '../styles/HomeStyle.css';
 import axios from 'axios';
 import state from '../variables/states';
 import logo from '../assets/logo/logo.png'
+import { useMediaQuery } from 'react-responsive'
 
 // const urlSmall = state.urlSmallGym;
 // const urlLarge = state.urlLargeGym;  
@@ -27,6 +28,7 @@ function Home() {
   const [effectLargeGym, setEffectLargeGym] = useState('');
   const [deckValueLargeGym, setDeckValueLargeGym] = useState();
   const navigate = useNavigate();
+  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
 
     // useEffect(
     //     setTimeout(() => {
@@ -139,36 +141,44 @@ function Home() {
         <div className='section-title'>
           <div className='section-title-text'>Dynamic fit control app</div>
         </div>
-        <div className='controls'>
-          <div className='main-description'>Kies de zaal om te bedienen</div>
-          <div className='button-section'>
-            <a className='button' onClick={() => navigate('/smallgym')}>
-              <div className='button-text'>Kleine Zaal</div>
-            </a>
-            <a className='button' onClick={() => navigate('/largegym')}>
-              <div className='button-text'>Grote Zaal</div>
-            </a>
-          </div>
-          <div className='active-scene-container'>
-            <div className='active-scene-text'>Active scene:</div>
-            <div className='active-scene-text'>Active scene:</div>
-          </div>
-          <div className='active-scene-response-container'>
-            <div className='active-scene-response-text'>
-              <div className='active-scene-response-effect'>{state.smallGymEffect}</div>
+        {isPortrait ? 
+          <div className='controls'>
+            <div className='main-description'>Kies de zaal om te bedienen</div>
+            <div className='button-section'>
+              <a className='button' onClick={() => navigate('/smallgym')}>
+                <div className='button-text'>Kleine Zaal</div>
+              </a>
+              <a className='button' onClick={() => navigate('/largegym')}>
+                <div className='button-text'>Grote Zaal</div>
+              </a>
             </div>
-            <div className='active-scene-response-text'>
-              <div className='active-scene-response-effect'>{state.largeGymEffect}</div>
-            </div>
+            {/* <div className='status-container'> */}
+              <div className='active-scene-container'>
+                <div className='active-scene-text'>Active scene:</div>
+                <div className='active-scene-text'>Active scene:</div>
+              </div>
+              <div className='active-scene-response-container'>
+                <div className='active-scene-response-text'>
+                  <div className='active-scene-response-effect'>{state.smallGymEffect}</div>
+                </div>
+                <div className='active-scene-response-text'>
+                  <div className='active-scene-response-effect'>{state.largeGymEffect}</div>
+                </div>
+              </div>
+            {/* </div> */}
           </div>
-        </div>
-        <a className='logo' onClick={() => navigate('/help')}>
+        :
+          <div className='orientation-message-home'>The app can only be used in portrait orientation.<br /> Please rotate your device.</div>
+        }
+        <div className='logo-container'>
+          <a className='logo' onClick={() => navigate('/help')}>
             <img
-                className='subLogo'
-                src={logo}
-                alt="logo"
-                />
+              className='subLogo'
+              src={logo}
+              alt="logo"
+            />
           </a>
+        </div>
     </div>
   );
 }

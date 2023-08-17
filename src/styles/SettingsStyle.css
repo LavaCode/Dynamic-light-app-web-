@@ -10,10 +10,19 @@
     /* color: #fff; */
 }
 
+.orientation-message-settings {
+    color: rgb(196, 251, 80);
+    font-weight: 600;
+    font-size: min(4vw, 30px);
+    margin: auto;
+    margin-top: 5%;
+}
+
 .settings-logo {
     width: 30%;
+    max-width: 200px;
     height: auto;
-    margin-top: 3%;
+    margin-top: 25px;
     filter: invert(100%);
 }
 
@@ -21,7 +30,7 @@
     font-family: 'AvenirNextCondensed-Medium';
     font-size: 20px;
     opacity: 0.6;
-    margin-top: 5%;
+    margin-top: 5px;
 }
 
 .form-pin-login {
@@ -103,7 +112,7 @@
     width: 100%;
     bottom: 0;
     box-sizing: border-box;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 .all-settings {
@@ -187,5 +196,5 @@
     color: rgb(196, 251, 80);
     width: 80%;
     margin: auto;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }

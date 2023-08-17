@@ -114,9 +114,8 @@ function Launcher() {
   return (
     <>
         <div className='container'>
-            {/* <Outlet /> */}
             <div>
-                <img className='logo-container' src={logo} alt="logo"/>
+                <img className='logo-container-launcher' src={logo} alt="logo"/>
             </div>
             
             <div>
@@ -127,7 +126,6 @@ function Launcher() {
                     </>
                 }      
             </div>
-            
         </div>
     </>
   )

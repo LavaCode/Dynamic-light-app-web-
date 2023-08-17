@@ -9,11 +9,19 @@
     position: fixed;
 }
 
+.orientation-message-help {
+    color: rgb(196, 251, 80);
+    font-weight: 600;
+    font-size: min(4vw, 30px);
+    margin: auto;
+    margin-top: 5%;
+}
+
 .container-help {
     width: 100%;
     align-items: center;
     margin: auto;
-    margin-top: 50%;
+    margin-top: 50px;
 }
 
 .text-help {
@@ -26,11 +34,11 @@
 .image-container-help {
     width: 100%;
     align-items: center;
-    margin-top: 20%;
+    margin-top: 25px;
 }
 
 .support-logo-help {
-    width: 20%;
+    width: 100px;
     height: 100%;
     filter: invert(30%);
     margin-top: 10%;
@@ -40,28 +48,19 @@
 .help-footer {
     position: fixed;
     width: 100%;
-    bottom: 0;
+    bottom: 5%;
     box-sizing: border-box;
 }
-
-.settings-container-help {
-    margin-bottom: 10px;
-}
-
-.button-container-help {
-    width: 100px;
-    height: auto;
-}
-
 .button-text-help {
     font-size: 20px;
     font-weight: 600;
     border: 3px solid rgba(255, 255, 255, 0.5);
-    padding: 2%;
     text-align: center;
-    margin: 10%;
-    margin-bottom: 5%;
-    margin-top: 5%;
+    /* margin: 200px; */
+    width: 80%;
+    padding: 1% 20px;
+    margin: auto;
+    margin-bottom: 20px;
     color: rgba(255, 255, 255, 0.5);
     font-family: 'AvenirNextCondensed-Medium';
     text-transform: uppercase;

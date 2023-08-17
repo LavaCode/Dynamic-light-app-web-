@@ -9,23 +9,24 @@
     position: fixed;
 }
 
-.logo-container {
+.logo-container-launcher {
     width: 40%;
+    max-width: 250px;
     height: auto;
-    margin-top: 20%;
+    margin-top: 50px;
     filter: invert(60%);
 }
 
 .indicator-container {
     color: rgb(196, 251, 80);
     margin: auto;
-    margin-top: 30%;
+    margin-top: 200px;
 }
 
 .subtext {
     color: rgb(196, 251, 80);
     margin: auto;
-    margin-top: 30%;
+    margin-top: 100px;
     font-Family: 'AvenirNextCondensed-Medium';
     font-size: 14px;
 }

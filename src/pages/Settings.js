@@ -4,6 +4,7 @@ import '../styles/SettingsStyle.css';
 import state from '../variables/states'
 import { db } from '../db.js';
 import logo from '../assets/logo/logo.png'
+import { useMediaQuery } from 'react-responsive'
 
 function Settings() {
     const [dbIpValueSmall, setDbIpValueSmall] = useState();
@@ -18,6 +19,7 @@ function Settings() {
     const [pincodePlchldr, setPincodePlchldr] = useState();
     const [error, setError] = useState();
     const navigate = useNavigate();
+    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
 
     useEffect(() => {
         loadSmallData();
@@ -151,6 +153,9 @@ function Settings() {
 
     return (
         <div className='section-container-settings'>
+            {isPortrait ? 
+            <>
+
             <img
                 className='settings-logo'
                 src={logo}
@@ -177,16 +182,16 @@ function Settings() {
                         <div className='error-container-settings'>
                             {error && <div className='error-message-settings'>{error}</div>}
                         </div>
-                        <div className="login-button login-enter-button">
-                            <a type="submit" onClick={checkPin}>Login</a>
+                        <div className="login-button login-enter-button" onClick={checkPin}>
+                            <a type="submit">Login</a>
                         </div>
                     </form>
                     <div className='login-other-functions'>
-                        <div className='login-button login-return-back'>
-                            <a onClick={() => navigate(-1)}>Go back</a>
+                        <div className='login-button login-return-back' onClick={() => navigate(-1)}>
+                            <a>Go back</a>
                         </div>
-                        <div className='login-button login-reload-page'>
-                            <a onClick={() => navigate('/')}>Reload page</a>
+                        <div className='login-button login-reload-page' onClick={() => navigate('/')}>
+                            <a>Reload page</a>
                         </div>
                     </div>
                 </>
@@ -214,12 +219,12 @@ function Settings() {
                                     onSubmit={updateIpSmall}
                                 />
                             </div>
-                            <div className="update-reset-button update">
-                                <a type="button" onClick={updateIpSmall}>Update</a>
+                            <div className="update-reset-button update" onClick={updateIpSmall}>
+                                <a type="button">Update</a>
                             </div>
                         </form>
-                        <div className="update-reset-button">
-                            <a onClick={deleteDataSmall}>Restore default</a>
+                        <div className="update-reset-button" onClick={deleteDataSmall}>
+                            <a>Restore default</a>
                         </div>
                     </div>
                     <div className='all-settings large'>
@@ -241,12 +246,12 @@ function Settings() {
                                     onSubmit={updateIpLarge}
                                 />
                             </div>
-                            <div className="update-reset-button update">
-                                <a type="button" onClick={updateIpLarge}>Update</a>
+                            <div className="update-reset-button update" onClick={updateIpLarge}>
+                                <a type="button">Update</a>
                             </div>
                         </form>
-                        <div className="update-reset-button">
-                            <a onClick={deleteDataLarge}>Restore default</a>
+                        <div className="update-reset-button" onClick={deleteDataLarge}>
+                            <a>Restore default</a>
                         </div>
                     </div>
                     <div className='all-settings pin'>
@@ -267,12 +272,12 @@ function Settings() {
                                     onSubmit={updatePin}
                                 />
                             </div>
-                            <div className="update-reset-button update">
-                                <a type="button" onClick={updatePin}>Update</a>
+                            <div className="update-reset-button update" onClick={updatePin}>
+                                <a type="button">Update</a>
                             </div>
                         </form>
-                        <div className="update-reset-button">
-                            <a onClick={deleteDataPin}>Restore default</a>
+                        <div className="update-reset-button" onClick={deleteDataPin}>
+                            <a>Restore default</a>
                         </div>
                     </div>
 
@@ -284,6 +289,10 @@ function Settings() {
                     </div>
                 </>
             }
+            </>
+        :
+            <div className='orientation-message-settings'>The app can only be used in portrait orientation.<br /> Please rotate your device.</div>
+        }
         </div>
     );
 }
