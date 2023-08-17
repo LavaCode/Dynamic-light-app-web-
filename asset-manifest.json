@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Dynamic-light-app-web-/static/css/main.590b1bf3.css",
-    "main.js": "/Dynamic-light-app-web-/static/js/main.ebc598c8.js",
+    "main.js": "/Dynamic-light-app-web-/static/js/main.f7729c7d.js",
     "static/js/787.6e9670d2.chunk.js": "/Dynamic-light-app-web-/static/js/787.6e9670d2.chunk.js",
     "static/media/logo.png": "/Dynamic-light-app-web-/static/media/logo.16125e356d27b6c67093.png",
     "static/media/support.png": "/Dynamic-light-app-web-/static/media/support.15f47a55e46ead2a93ca.png",
     "index.html": "/Dynamic-light-app-web-/index.html",
     "main.590b1bf3.css.map": "/Dynamic-light-app-web-/static/css/main.590b1bf3.css.map",
-    "main.ebc598c8.js.map": "/Dynamic-light-app-web-/static/js/main.ebc598c8.js.map",
+    "main.f7729c7d.js.map": "/Dynamic-light-app-web-/static/js/main.f7729c7d.js.map",
     "787.6e9670d2.chunk.js.map": "/Dynamic-light-app-web-/static/js/787.6e9670d2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.590b1bf3.css",
-    "static/js/main.ebc598c8.js"
+    "static/js/main.f7729c7d.js"
   ]
 }
