@@ -120,12 +120,14 @@ function Settings() {
 
     async function updatePin() {
         try {
-            if (pincodeValue !== undefined) {
+            if (pincodeValue !== undefined && pincodeValue.length === 4 ) {
                 const pin = await db.pincode.add({
                     pincodeValue
                 });
                 alert('Succesfully updated your PIN, restarting now...')
                 setTimeout(() => navigate('/'), 1000);
+            } else {
+                alert("NOPE! Incorrect input!");
             }
         } catch (e) {
             console.error(e);
@@ -184,6 +186,9 @@ function Settings() {
                         </div>
                         <div className="login-button login-enter-button" onClick={checkPin}>
                             <a type="submit">Login</a>
+                        </div>
+                        <div className="login-button login-enter-button" onClick={deleteDataPin}>
+                            <a type="submit">temp</a>
                         </div>
                     </form>
                     <div className='login-other-functions'>
