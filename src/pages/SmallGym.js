@@ -30,9 +30,9 @@ function SmallGym(props) {
     }
 
     async function fireScene(num) {
+        printEffect(num);
         try {
-            printEffect(num);
-            // await axios.post(`${urlSmall}/RemoteCommands/SetStorageDeck${num}`);
+            await axios.post(`${urlSmall}/RemoteCommands/SetStorageDeck${num}`);
         } catch(e) {
             alert(e + "\n\nHelaas! Het is niet gelukt vanwege een netwerkprobleem! \n\nMogelijk ben je niet verbonden met WiFi \"DynamicFit\" of is de lichtcomputer offline.");
         }

@@ -187,9 +187,10 @@ function Settings() {
                         <div className="login-button login-enter-button" onClick={checkPin}>
                             <a type="submit">Login</a>
                         </div>
-                        <div className="login-button login-enter-button" onClick={deleteDataPin}>
-                            <a type="submit">temp</a>
+                        <div className="login-button login-enter-button reset-pin" onClick={deleteDataPin}>
+                            <a type="submit">Reset pin to default -- ({state.pincode})</a>
                         </div>
+                        <div className='pin-input-text reset-pin-text'>Only use if you forgot the PIN</div>
                     </form>
                     <div className='login-other-functions'>
                         <div className='login-button login-return-back' onClick={() => navigate(-1)}>

@@ -7,11 +7,8 @@ import state from '../variables/states';
 import logo from '../assets/logo/logo.png'
 import { useMediaQuery } from 'react-responsive'
 
-// const urlSmall = state.urlSmallGym;
-// const urlLarge = state.urlLargeGym;  
-
-const urlSmall = "";
-const urlLarge = "";  
+const urlSmall = state.urlSmallGym;
+const urlLarge = state.urlLargeGym;  
 
 /*
 /RemoteCommands/GetStoragePlaceDeckA
@@ -30,12 +27,12 @@ function Home() {
   const navigate = useNavigate();
   const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
 
-    // useEffect(
-    //     setTimeout(() => {
-    //         getInfoSmall();
-    //         getInfoLarge();
-    //     }, 100)
-    // );
+    useEffect(
+        setTimeout(() => {
+            getInfoSmall();
+            getInfoLarge();
+        }, 100)
+    );
 
   async function getInfoSmall() {
     try {
@@ -55,45 +52,45 @@ function Home() {
     }
   }
 
-//   useEffect(() => {
-//     if (deckValueSmallGym < 127) {
-//       for (let i in state.effectsSmallGym) {
-//         if (state.effectsSmallGym[i].num === `A=S1P${effectSmallGym}`) {
-//             state.smallGymEffect = state.effectsSmallGym[i].name;
-//         }
-//       }
-//     } else if( deckValueSmallGym >= 127) {
-//       for (let i in state.effectsSmallGym) {
-//         if (state.effectsSmallGym[i].num === `B=S2P${effectSmallGym}`) {
-//             state.smallGymEffect = state.effectsSmallGym[i].name;
-//         }
-//       }
-//     } 
-//   }, [effectSmallGym])
+  useEffect(() => {
+    if (deckValueSmallGym < 127) {
+      for (let i in state.effectsSmallGym) {
+        if (state.effectsSmallGym[i].num === `A=S1P${effectSmallGym}`) {
+            state.smallGymEffect = state.effectsSmallGym[i].name;
+        }
+      }
+    } else if( deckValueSmallGym >= 127) {
+      for (let i in state.effectsSmallGym) {
+        if (state.effectsSmallGym[i].num === `B=S2P${effectSmallGym}`) {
+            state.smallGymEffect = state.effectsSmallGym[i].name;
+        }
+      }
+    } 
+  }, [effectSmallGym])
 
-//   useEffect(() => {
-//     if (deckValueLargeGym < 127) {
-//       for (let i in state.effectsLargeGym) {
-//         if (state.effectsLargeGym[i].num === `A=S1P${effectLargeGym}`) {
-//             state.largeGymEffect = state.effectsLargeGym[i].name;
-//         }
-//       }
-//     } else if( deckValueLargeGym >= 127) {
-//       for (let i in state.effectsLargeGym) {
-//         if (state.effectsLargeGym[i].num === `B=S2P${effectLargeGym}`) {
-//             state.largeGymEffect = state.effectsLargeGym[i].name;
-//         }
-//       }
-//     } 
-//   }, [effectLargeGym])
+  useEffect(() => {
+    if (deckValueLargeGym < 127) {
+      for (let i in state.effectsLargeGym) {
+        if (state.effectsLargeGym[i].num === `A=S1P${effectLargeGym}`) {
+            state.largeGymEffect = state.effectsLargeGym[i].name;
+        }
+      }
+    } else if( deckValueLargeGym >= 127) {
+      for (let i in state.effectsLargeGym) {
+        if (state.effectsLargeGym[i].num === `B=S2P${effectLargeGym}`) {
+            state.largeGymEffect = state.effectsLargeGym[i].name;
+        }
+      }
+    } 
+  }, [effectLargeGym])
 
-//   useEffect(() => {
-//     getEffectSmall();
-//   }, [deckValueSmallGym])
+  useEffect(() => {
+    getEffectSmall();
+  }, [deckValueSmallGym])
 
-//   useEffect(() => {
-//     getEffectLarge();
-//   }, [deckValueLargeGym])
+  useEffect(() => {
+    getEffectLarge();
+  }, [deckValueLargeGym])
 
   async function getEffectSmall() {
     console.log('Check small');
