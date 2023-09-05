@@ -1,6 +1,0 @@
-- responsive (landscape/portrait)
-  maybe based on screen height display content or not (or display; please flip your screen)
-- home 100% working (readout of active scene)
-- favicon
-- In Settings --> Go Back / Reload Page <-- Only text is pressable
-
